@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            background-color: #eee;
+            margin-top: 0px;
+        }
+        
+        sup {
+            color: red;
+            font-size: 20px;
+        }
+        
+        form {
+            background-color: white;
+            width: 60%;
+            margin: auto;
+            padding-bottom: 16px;
+            box-shadow: 0 0 2px black;
+        }
+        
+        hr {
+            height: 1px;
+            background-color: #eee;
+        }
+        
+        form caption {
+            font-size: 32px;
+        }
+        
+        h1 {
+            margin: 8px;
+        }
+        
+        article {
+            margin: 8px 24px;
+            display: grid;
+            grid-template-columns: .7fr 1fr;
+        }
+        
+        input {
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            padding: 4px;
+            border: solid black 1px;
+            border-radius: 4px;
+        }
+        
+        input:focus-visible {
+            outline: none;
+        }
+        
+        select {
+            height: 28px;
+        }
+        
+        textarea {
+            border-radius: 4px;
+            padding: 4px;
+            font-size: 16px;
+        }
+        
+        textarea:focus-visible {
+            outline: none;
+        }
+        
+        #graduation-year {
+            width: 88px;
+        }
+        
+        button {
+            grid-column: 2/3;
+            margin-top: 8px;
+            width: 100px;
+            height: 46px;
+            color: white;
+            background-color: red;
+            border: none;
+        }
+        
+        #birth {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 16px;
+        }
+        
+        .even-month {
+            display: none;
+        }
+        
+        .hcm {
+            display: none;
+        }
+        
+        .hn {
+            display: none;
+        }
+        
+        .leap_year {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <caption>
+            <h1>Đăng Kí Thông Tin</h1>
+        </caption>
+        <hr>
+        <article>
+            <label for="name">Họ và tên thí sinh(ghi đầy đủ dấu tiếng việt) <sup title="thông tin bát buộc">*</sup></label>
+            <input type="text" id="name">
+        </article>
+        <article>
+            <label for="identify">CMND <sup title="thông tin bát buộc">*</sup></label>
+            <input type="text" id="identify">
+        </article>
+        <article>
+            <label for="">Ngày sinh <sup title="thông tin bát buộc">*</sup></label>
+            <div id="birth">
+                <select name="birth__day" id="birth__day">
+                    <option value="">Ngày</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option class="leap_year" value="29">29</option>
+                    <option class="month2" value="30">30</option>
+                    <option class="even-month" value="31">31</option>
+                </select>
+                <select name="birth__month" id="birth__month">
+                    <option value="">Tháng</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="birth__year" name="birth__year">
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2031">2031</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="20020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+        </article>
+        <article>
+            <label for="gender">giới tinh <sup title="thông tin bát buộc">*</sup></label>
+            <div>
+                <input type="radio" name="gender" id="gender" value="mail">Nam
+                <input type="radio" name="gender" value="femail">nữ
+            </div>
+        </article>
+        <article>
+            <label for="emial">Email <sup title="thông tin bát buộc">*</sup></label>
+            <input type="email" name="email" id="email">
+        </article>
+        <article>
+            <label for="telephone">Điện thoại liên lạc <sup title="thông tin bát buộc">*</sup></label>
+            <input type="tel" name="telephone" id="telephone">
+        </article>
+        <article>
+            <label for="adress">Địa chỉ nhận giấy báo trúng tuyển <sup title="thông tin bát buộc">*</sup></label>
+            <textarea name="adress" id="adress" cols="30" rows="5"></textarea>
+        </article>
+        <article>
+            <label for="">Tỉnh/Thành Phố lóp 12</label>
+            <select name="city" id="city">
+                <option value="ct">Cần Thơ</option>
+                <option value="hcm">Hồ CHí Minh</option>
+                <option value="hn">Hà Nội</option>
+            </select>
+        </article>
+        <article>
+            <label for="">Quận/Huyện lớp 12</label>
+            <select name="distrist" id="distrist">
+                <optgroup class="ct">
+                    <option value="thoilai">Thới lai</option>
+                    <option value="omon">Ô Môn</option>
+                    <option value="codo">Cờ Đỏ</option>
+                </optgroup>
+                <optgroup class="hcm">
+                    <option value="q1">Quận 1</option>
+                    <option value="q2">Quận 2</option>
+                    <option value="q3">Quận 3</option>
+                </optgroup>
+                <optgroup class="hn">
+                    <option value="tm">Thanh Mai</option>
+                    <option value="to">Thanh Oai</option>
+                    <option value="bd">Ba đình</option>
+                </optgroup>
+                
+            </select>
+        </article>
+        <article>
+            <label for=""> chon trường</label>
+            <select name="school" id="school">
+               <optgroup class="ct">
+                    <option value="thptllp">THPT Lưu Hữu Phước</option>
+                    <option value="thptltt">THPT LÝ Tự Trọng</option>
+               </optgroup>
+               <optgroup class="hcm">
+                   <option value="htptlqd"> THPT Lê Quý Đôn</option>
+                   <option value="qttphcm"> Trường Quóc Tế Thành Phố Hồ Chí Minh</option>
+               </optgroup>
+               <optgroup class="hn">
+                <option value="thptcva">THPT Chu Văn An</option>
+                <option value="thpthn"> THPT Hà Nội</option>
+               </optgroup>
+
+            </select>
+        </article>
+        <article>
+            <label for="graduation-year">Năm tốt nghiệp</label>
+            <input type="text" name="graduation-year" id="graduation-year">
+        </article>
+        <hr>
+        <article>
+            <button type="submit">GIỬI HỒ SƠ</button>
+        </article>
+    </form>
+    <script>
+        var birth__month = document.getElementById('birth__month')
+        var even_month = document.querySelector('.even-month')
+        var month2 = document.querySelector('.month2')
+        var leap_year = document.querySelector('.leap_year')
+        var birth__day = document.getElementById('birth__day')
+
+        var birth__year = document.getElementById('birth__year')
+        var value_year = parseInt(birth__year.value)
+
+        birth__month.addEventListener('change', () => {
+            var value_day = birth__day.value
+
+
+            if (value_year % 4 == 0) {
+                leap_year.style.display = 'block'
+            } else {
+                if (value_day == '29') {
+                    birth__day.value = '28'
+                }
+                leap_year.style.display = 'none'
+            }
+            var v = birth__month.value
+            if (v == '1' || v == '3' || v == '5' || v == '7' || v == '8' || v == '10' || v == '12') {
+                even_month.style.display = 'block'
+                month2.style.display = 'block'
+            } else if (v == '2') {
+                if (value_day == '31' || value_day == '30') {
+                    birth__day.value = '29'
+                }
+                month2.style.display = 'none'
+                even_month.style.display = 'none'
+            } else {
+                if (value_day == '31') {
+                    birth__day.value = '30'
+                }
+                even_month.style.display = 'none'
+                month2.style.display = 'block'
+
+            }
+        })
+
+        checkYeark(value_year)
+
+        birth__year.addEventListener('change', () => {
+            value_year = parseInt(birth__year.value)
+            console.log(value_year % 4)
+            checkYeark(value_year)
+        })
+
+        function checkYeark(value_year) {
+            var value_day = birth__day.value
+            if (value_year % 4 == 0) {
+                console.log('năm nhuần')
+                if (birth__month.value == '2') {
+
+                    console.log('nam nhuần tháng 2')
+                    leap_year.style.display = 'block'
+                } else {
+                    leap_year.style.display = 'none'
+                }
+            } else {
+                if (value_day == '29') {
+                    birth__day.value = '28'
+                }
+                leap_year.style.display = 'none'
+            }
+        }
+
+
+        var city = document.getElementById('city')
+        var formct = document.querySelectorAll('.ct')
+        var formhcm = document.querySelectorAll('.hcm')
+        var formhn = document.querySelectorAll('.hn')
+        var distrist = document.getElementById('distrist')
+        var school = document.getElementById('school')
+
+        city.addEventListener('change', () => {
+            for (let i = 0; i < formct.length; i++) {
+                switch (city.value) {
+                    case 'ct':
+                        distrist.value = 'thoilai'
+                        school.value = 'thptllp'
+                        formct[i].style.display = 'block'
+                        formhcm[i].style.display = 'none'
+                        formhn[i].style.display = 'none'
+                        break;
+                    case 'hcm':
+                        school.value = 'htptlqd'
+                        distrist.value = 'q1'
+                        formct[i].style.display = 'none'
+                        formhcm[i].style.display = 'block'
+                        formhn[i].style.display = 'none'
+                        break;
+
+                    default:
+                        school.value = 'thptcva'
+                        distrist.value = 'tm'
+                        formct[i].style.display = 'none'
+                        formhcm[i].style.display = 'none'
+                        formhn[i].style.display = 'block'
+                        break;
+                }
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
